@@ -1,45 +1,27 @@
 <header>
   <div class="container">
     <h1>Neshama Tech</h1>
-    <nav>
-      <a href="#home">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
+
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir Menu">
+      &#9776;
+    </button>
+
+    <nav [class.active]="menuAberto">
+      <a href="#home" (click)="fecharMenu()">Início</a>
+      <a href="#sobre" (click)="fecharMenu()">Sobre</a>
+      <a href="#servicos" (click)="fecharMenu()">Serviços</a>
+      <a href="#portfolio" (click)="fecharMenu()">Portfólio</a>
+      <a href="#contato" (click)="fecharMenu()">Contato</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section id="home" data-aos="fade-up">
-    <h2>Bem-vindo à Neshama Tech</h2>
-    <p>Soluções digitais com propósito e alma.</p>
-  </section>
-
-  <section id="sobre" data-aos="fade-up">
-    <h2>Sobre Nós</h2>
-    <p>Um time apaixonado por tecnologia, criatividade e transformação.</p>
-  </section>
-
-  <section id="servicos" data-aos="zoom-in">
-    <h2>O que fazemos</h2>
-    <ul>
-      <li>Desenvolvimento Web</li>
-      <li>Consultoria Técnica</li>
-      <li>Produtos com propósito</li>
-    </ul>
-  </section>
-
-  <section id="portfolio" data-aos="fade-left">
-    <h2>Portfólio</h2>
-    <p>Conheça nossos projetos e cases de impacto.</p>
-  </section>
-
-  <section id="contato" data-aos="fade-right">
-    <h2>Contato</h2>
-    <p>Fale com a gente e descubra como podemos ajudar.</p>
-  </section>
+  <app-home></app-home>
+  <app-sobre></app-sobre>
+  <app-servicos></app-servicos>
+  <app-portfolio></app-portfolio>
+  <app-contato></app-contato>
 </main>
 
 <footer>

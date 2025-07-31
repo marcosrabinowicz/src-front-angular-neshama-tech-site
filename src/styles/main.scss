@@ -19,3 +19,7 @@ a {
     color: $secondary-color;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
