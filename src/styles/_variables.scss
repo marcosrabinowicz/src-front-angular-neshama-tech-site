@@ -1,17 +1,21 @@
-// 🎨 Cores principais da identidade visual
-$primary-color: #0057a3;
-$secondary-color: #4fc3f7;
-$background-color: #f9f9f9;
-$text-color: #333;
+// Cores base
+$primary-color: #0e2a47; // Azul escuro
+$secondary-color: #f3e8dd; // Bege claro
+$highlight-color: #ffcc70; // Amarelo suave
+$text-color: #f9f9f9; // Branco suave
 
-// 🧱 Tipografia
-$font-family-base: 'Segoe UI', Roboto, sans-serif;
+// Tipografia
+$font-family-base: "Segoe UI", Roboto, sans-serif;
 $font-size-base: 16px;
 
-// 📏 Espaçamentos
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 2rem;
+// Espaçamentos
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
 
-// 🌀 Bordas
+// Bordas
 $border-radius: 0.75rem;
+
+// Sombra
+$shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);

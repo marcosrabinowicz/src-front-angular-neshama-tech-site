@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 section {
   background-color: $secondary-color;
   color: white;

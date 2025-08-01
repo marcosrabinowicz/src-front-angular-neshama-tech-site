@@ -1,25 +1,32 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// 🌍 Estilos globais
 body {
   margin: 0;
   padding: 0;
   font-family: $font-family-base;
   font-size: $font-size-base;
-  background-color: $background-color;
+  background-color: $secondary-color;
   color: $text-color;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: $primary-color;
+  color: $highlight-color;
 
   &:hover {
-    color: $secondary-color;
+    text-decoration: underline;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+section {
+  padding: $spacing-lg $spacing-sm;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: $spacing-sm;
+  color: $highlight-color;
+  text-align: center;
 }

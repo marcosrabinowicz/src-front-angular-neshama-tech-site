@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.sobre-section {
+  background-color: $primary-color;
+  color: $text-color;
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      color: $highlight-color;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: $spacing-sm;
+    }
+
+    strong {
+      color: $highlight-color;
+    }
+  }
+}

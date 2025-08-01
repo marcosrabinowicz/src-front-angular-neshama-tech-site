@@ -1,0 +1,16 @@
+<section id="portfolio" class="portfolio-section" data-aos="fade-up">
+  <div class="container">
+    <h2>Projetos</h2>
+
+    <div class="cards">
+      <div class="card" *ngFor="let projeto of projetos">
+        <h3>{{ projeto.titulo }}</h3>
+        <p class="descricao">{{ projeto.descricao }}</p>
+        <p class="tecnologias">Tecnologias: {{ projeto.tecnologias }}</p>
+        <a [href]="projeto.linkGithub" target="_blank" class="ver-github"
+          >Ver no GitHub</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
