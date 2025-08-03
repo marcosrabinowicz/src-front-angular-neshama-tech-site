@@ -1,59 +1,77 @@
-# NeshamaTechSite
+# Neshama Tech - Site Oficial 🌐
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Este é o repositório do site da **Neshama Tech**, a marca pessoal de desenvolvimento de soluções digitais de [Marcos Rabinowicz](https://www.linkedin.com/in/marcos-rabinowicz/).
 
-## Development server
+O site tem como objetivos:
+- Apresentar a Neshama Tech e seus serviços
+- Exibir o portfólio de projetos de forma clara e responsiva
+- Criar uma ponte entre o desenvolvedor e suas soluções
 
-To start a local development server, run:
+## 🌍 Acesse o site
+🔗 [www.neshamatech.com.br](https://www.neshamatech.com.br)
+
+## 📂 Repositórios de Projetos
+
+- 🧠 Frontend do site:  
+  [`src-front-ng-neshama-tech-site`](https://github.com/marcos-rabinowicz/src-front-ng-neshama-tech-site)
+
+- 🧰 Backend em Go (projeto de catálogo modularizado):  
+  [`src-back-go-mini-sistema-de-catalogo-versao-modularizada`](https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada)
+
+- ⚙️ Backend em .NET (em breve):  
+  🔜 Repositório em criação
+
+## 🛠️ Tecnologias Utilizadas
+
+- Angular 20
+- SCSS modularizado
+- AOS (Animate On Scroll)
+- JSON mockado para exibição de projetos
+- GitHub Pages para deploy estático
+
+## 📁 Estrutura do Projeto
+
+src/
+├── app/ # Componentes principais por seção (home, sobre, etc.)
+├── assets/ # Imagens e JSON de projetos
+├── styles/ # Estilos globais e SCSS modularizado
+└── environments/ # Configurações por ambiente
+
+perl
+Copiar
+Editar
+
+## 🚀 Executar localmente
 
 ```bash
+npm install
 ng serve
-```
+Acesse em http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔨 Build para Produção
+bash
+Copiar
+Editar
+ng build --configuration production
+A versão final será gerada em:
 
-## Code scaffolding
+bash
+Copiar
+Editar
+docs/browser/
+🧱 Próximos Passos
+✅ Versão estável 1.0 publicada
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🔧 Subir repositório do projeto em .NET
 
-```bash
-ng generate component component-name
-```
+🔧 Criar API para cadastro e exibição dinâmica de projetos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+🎨 Refatorar visual com base na identidade da logo da Neshama Tech
 
-```bash
-ng generate --help
-```
+✨ Autor
+Marcos Rabinowicz
+Desenvolvedor & Fundador da Neshama Tech
+📧 contato@neshamatech.com.br
+🔗 LinkedIn
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+“Tecnologia com alma, propósito com código.”

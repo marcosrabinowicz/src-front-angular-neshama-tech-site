@@ -1,14 +1,14 @@
 [
   {
-    "titulo": "e-cavod",
-    "descricao": "Plataforma para gestão e inclusão sinagogal no meio da juventude.",
-    "tecnologias": "Angular, Node.js, TypeScript, PostgreSQL",
-    "linkGithub": "https://github.com/seu-usuario/e-cavod"
+    "titulo": "Go - backend modularizado",
+    "descricao": "Projeto de catálogo de livros, desenvolvido com Go.",
+    "tecnologias": "Golang",
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-front-ng-neshama-tech-site"
   },
   {
     "titulo": "Neshama Tech Site",
     "descricao": "Website institucional da Neshama Tech, feito em Angular.",
     "tecnologias": "Angular, SCSS",
-    "linkGithub": "https://github.com/seu-usuario/src-front-ng-neshama-tech-site"
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada"
   }
 ]
