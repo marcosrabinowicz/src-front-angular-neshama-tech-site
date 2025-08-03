@@ -1,6 +1,6 @@
 [
   {
-    "titulo": "Go - backend modularizado",
+    "titulo": "Go - Catálogo de Livros",
     "descricao": "Projeto de catálogo de livros, desenvolvido com Go.",
     "tecnologias": "Golang",
     "linkGithub": "https://github.com/marcos-rabinowicz/src-front-ng-neshama-tech-site"
