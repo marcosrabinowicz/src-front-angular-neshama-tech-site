@@ -7,6 +7,6 @@ import AOS from 'aos';
 
 bootstrapApplication(App, {
   providers: [provideHttpClient(), ...appConfig.providers],
-}).catch((err) => console.error(err));
+}).catch((err: any) => console.error(err));
 
 AOS.init();

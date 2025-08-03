@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <h1>Neshama Tech</h1>
+    <h1>Neshama Tech | Marcos Rabinowicz</h1>
 
     <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir Menu">
       &#9776;
@@ -27,3 +27,7 @@
 <footer>
   <p>&copy; 2025 Neshama Tech. Todos os direitos reservados.</p>
 </footer>
+
+<button class="scroll-to-top" (click)="scrollToTop()" *ngIf="showScrollTop" data-aos="fade-up" data-aos-duration="600">
+  <i class="fas fa-chevron-up"></i>
+</button>
