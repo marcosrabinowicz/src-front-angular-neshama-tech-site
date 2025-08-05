@@ -3,13 +3,13 @@
     "titulo": "Go - Catálogo de Livros",
     "descricao": "Projeto de catálogo de livros, desenvolvido com Go.",
     "tecnologias": "Golang",
-    "linkGithub": "https://github.com/marcos-rabinowicz/src-front-ng-neshama-tech-site"
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada"
   },
   {
     "titulo": "Angular - Neshama Tech Site",
     "descricao": "Website institucional da Neshama Tech, feito em Angular.",
     "tecnologias": "Angular, SCSS",
-    "linkGithub": "https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada"
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-front-angular-neshama-tech-site"
   },
   {
     "titulo": "Dotnet - Feira da Roça",
