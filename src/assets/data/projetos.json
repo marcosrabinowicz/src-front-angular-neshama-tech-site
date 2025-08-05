@@ -10,5 +10,11 @@
     "descricao": "Website institucional da Neshama Tech, feito em Angular.",
     "tecnologias": "Angular, SCSS",
     "linkGithub": "https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada"
+  },
+  {
+    "titulo": "Dotnet - Feira da Roça",
+    "descricao": " Desenvolvida no melhor estilo raiz do interior. Gerencia feirantes e os produtos que cada um vende.",
+    "tecnologias": "API RESTful, ASP.NET Core, C#, Entity Framework Core, SQLite",
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-back-dotnet-feira-da-roca"
   }
 ]
