@@ -3,4 +3,5 @@ export interface IProjeto {
   descricao: string;
   tecnologias: string;
   linkGithub: string;
+  demo: string;
 }

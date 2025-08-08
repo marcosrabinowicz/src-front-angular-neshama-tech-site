@@ -7,9 +7,15 @@
         <h3>{{ projeto.titulo }}</h3>
         <p class="descricao">{{ projeto.descricao }}</p>
         <p class="tecnologias">Tecnologias: {{ projeto.tecnologias }}</p>
-        <a [href]="projeto.linkGithub" target="_blank" class="ver-github"
-          >Ver no GitHub</a
-        >
+
+        <div class="card-links">
+          <a [href]="projeto.linkGithub" target="_blank">
+            <i class="fab fa-github"></i> Ver no GitHub
+          </a>
+          <a [href]="projeto.demo" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Ver Projeto
+          </a>
+        </div>
       </div>
     </div>
   </div>
