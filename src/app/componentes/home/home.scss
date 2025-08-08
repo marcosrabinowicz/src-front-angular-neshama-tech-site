@@ -1,7 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-section {
+.home-section {
   background-color: $secondary-color;
   color: white;
   padding: $spacing-lg * 2 $spacing-md;

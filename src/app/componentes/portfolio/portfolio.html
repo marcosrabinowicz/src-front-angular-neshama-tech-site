@@ -3,7 +3,12 @@
     <h2>Portfólio</h2>
 
     <div class="cards">
-      <div class="card" *ngFor="let projeto of projetos">
+      <div
+        class="card"
+        *ngFor="let projeto of projetos; let i = index"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="i * 100"
+      >
         <h3>{{ projeto.titulo }}</h3>
         <p class="descricao">{{ projeto.descricao }}</p>
         <p class="tecnologias">Tecnologias: {{ projeto.tecnologias }}</p>

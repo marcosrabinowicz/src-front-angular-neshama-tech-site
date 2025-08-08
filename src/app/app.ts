@@ -14,14 +14,19 @@ import AOS from 'aos';
   styleUrl: './app.scss',
   imports: [Home, Sobre, Portfolio, Servicos, Contato, CommonModule],
 })
-export class App implements OnInit{
+export class App implements OnInit {
   protected readonly title = signal('neshama-tech-site');
   protected showScrollTop = false;
   protected menuAberto = false;
 
   ngOnInit(): void {
-  AOS.init();
-}
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true, // anima só uma vez ao entrar
+      mirror: false, // não reanima ao rolar pra cima
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -40,5 +45,4 @@ export class App implements OnInit{
   fecharMenu() {
     this.menuAberto = false;
   }
-
 }
