@@ -7,11 +7,46 @@
 
 // 📱 Responsividade simples
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == 'sm' {
-    @media (max-width: 576px) { @content; }
-  } @else if $breakpoint == 'md' {
-    @media (max-width: 768px) { @content; }
-  } @else if $breakpoint == 'lg' {
-    @media (max-width: 992px) { @content; }
+  @if $breakpoint == "sm" {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media (max-width: 992px) {
+      @content;
+    }
   }
+}
+
+@mixin fluid-type($prop, $min, $max) {
+  #{$prop}: clamp(#{$min}, 1rem + 2vw, #{$max});
+}
+@mixin focus-ring {
+  outline: 2px solid var(--col-accent);
+  outline-offset: 3px;
+}
+@mixin card {
+  background: var(--col-surface);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in srgb, var(--col-primary) 45%, var(--col-border));
+    background: color-mix(in srgb, var(--col-surface) 85%, var(--col-primary));
+  }
+}
+/* AOS baseline */
+[data-aos] {
+  transition-timing-function: ease-out;
+}
+.aos-stagger > * {
+  transition-delay: calc(var(--i, 0) * 80ms);
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IProjeto } from '../../interfaces/projeto.interface';
+import { Projeto } from '../../models/projeto.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ProjetoService {
 
   constructor(private http: HttpClient) {}
 
-  getProjetos(): Observable<IProjeto[]> {
-    return this.http.get<IProjeto[]>(this.url);
+  getProjetos(): Observable<Projeto[]> {
+    return this.http.get<Projeto[]>(this.url);
   }
 }

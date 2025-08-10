@@ -1,0 +1,67 @@
+<section
+  id="servicos"
+  class="servicos-section"
+  aria-labelledby="servicos-title"
+>
+  <div class="container" data-aos="fade-up">
+    <p class="eyebrow">Neshama Tech</p>
+    <h2 class="h2" id="servicos-title">Serviços</h2>
+    <p class="lead">Do esboço ao deploy: front‑end, APIs e automações.</p>
+
+    <!-- Filtros (só aparece se houver categorias no JSON) -->
+    <nav
+      *ngIf="categorias.length"
+      class="chips"
+      aria-label="Categorias de serviços"
+    >
+      <ul role="list" class="chips__list">
+        <li *ngFor="let cat of categorias">
+          <button
+            type="button"
+            class="chip"
+            [class.is-active]="cat === selecionada"
+            (click)="aplicarFiltro(cat)"
+            [attr.aria-pressed]="cat === selecionada"
+          >
+            {{ cat }}
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Estados -->
+    <div *ngIf="carregando" class="status" aria-live="polite">Carregando…</div>
+    <div *ngIf="erro" class="status" role="alert">{{ erro }}</div>
+
+    <!-- Lista -->
+    <ul
+      class="lista-servicos aos-stagger"
+      role="list"
+      [attr.aria-label]="
+        categorias.length
+          ? 'Serviços da categoria ' + selecionada
+          : 'Lista de serviços'
+      "
+    >
+      <li
+        *ngFor="let servico of visiveis; let i = index; trackBy: trackByIndex"
+        class="card servico-item"
+        data-aos="fade-up"
+        [style.--i]="i"
+        tabindex="0"
+      >
+        <i [class]="servico.icon" aria-hidden="true"></i>
+        <span class="texto">{{ servico.texto }}</span>
+
+        <a
+          *ngIf="servico.link"
+          class="btn"
+          [href]="servico.link"
+          [attr.aria-label]="'Acessar ' + servico.texto"
+        >
+          Saber mais
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

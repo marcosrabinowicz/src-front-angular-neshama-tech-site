@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { IProjeto } from '../../interfaces/projeto.interface';
-import { ProjetoService } from '../../services/projeto/projeto.service';
+import { Projeto } from '../../shared/models/projeto.model';
+import { ProjetoService } from '../../shared/services/projeto/projeto.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,12 +10,12 @@ import { ProjetoService } from '../../services/projeto/projeto.service';
   styleUrl: './portfolio.scss',
 })
 export class Portfolio implements OnInit {
-  projetos: IProjeto[] = [];
+  projetos: Projeto[] = [];
 
   constructor(private projetoService: ProjetoService) {}
 
   ngOnInit(): void {
-    this.projetoService.getProjetos().subscribe((data: IProjeto[]) => {
+    this.projetoService.getProjetos().subscribe((data: Projeto[]) => {
       this.projetos = data;
     });
   }

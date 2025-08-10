@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit, signal } from '@angular/core';
-import { Home } from './componentes/home/home';
-import { Sobre } from './componentes/sobre/sobre';
-import { Portfolio } from './componentes/portfolio/portfolio';
-import { Servicos } from './componentes/servicos/servicos';
-import { Contato } from './componentes/contato/contato';
+import { Component, HostListener, signal } from '@angular/core';
+import { Home } from './components/home/home';
+import { Sobre } from './components/sobre/sobre';
+import { Portfolio } from './components/portfolio/portfolio';
+import { Servicos } from './components/servicos/servicos';
+import { Contato } from './components/contato/contato';
 
 import AOS from 'aos';
-import { Header } from './shared/header/header';
-import { Footer } from './shared/footer/footer';
+import { Header } from './shared/components/header/header';
+import { Footer } from './shared/components/footer/footer';
 
 @Component({
   selector: 'app-root',
@@ -25,18 +25,9 @@ import { Footer } from './shared/footer/footer';
     Footer,
   ],
 })
-export class App implements OnInit {
+export class App {
   protected readonly title = signal('neshama-tech-site');
   protected showScrollTop = false;
-
-  ngOnInit(): void {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true, // anima só uma vez ao entrar
-      mirror: false, // não reanima ao rolar pra cima
-    });
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

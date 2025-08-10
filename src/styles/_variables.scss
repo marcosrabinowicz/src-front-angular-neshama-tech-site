@@ -19,3 +19,64 @@ $border-radius: 0.75rem;
 
 // Sombra
 $shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+/* === Fontes === */
+$font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+/* Título serif para combinar com a logo */
+$font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+
+/* === Tipografia === */
+$font-size-300: clamp(2.2rem, 1.1rem + 3vw, 3.2rem);
+$font-size-200: clamp(1.6rem, 1rem + 2vw, 2.2rem);
+$font-size-150: clamp(1.3rem, 0.9rem + 1vw, 1.6rem);
+$font-size-100: 1rem;
+$font-size-90: 0.9375rem;
+$font-size-80: 0.875rem;
+
+$line-tight: 1.15;
+$line-snug: 1.25;
+$line-normal: 1.5;
+
+/* === Espaçamento === */
+$space-0: 0;
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+
+/* === Raio/Sombra === */
+$radius-md: 12px;
+$radius-lg: 16px;
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+/* === Tema Neshama Blue & Flame === */
+:root {
+  --col-primary: #e3c789; /* dourado chama */
+  --col-accent: #fdfef6; /* glow leve / links */
+  --col-text: #f7f3e5; /* marfim */
+  --col-bg: #0b263f; /* azul profundo */
+  --col-surface: #102c48; /* card */
+  --col-border: #1e3a56; /* borda */
+
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+}
+
+/* Tema claro alternativo (se quiser testar depois) */
+.theme-light {
+  --col-bg: #f8fafc;
+  --col-surface: #ffffff;
+  --col-border: #e5e7eb;
+  --col-text: #0b1220;
+  --col-primary: #4f46e5;
+  --col-accent: #f59e0b;
+}

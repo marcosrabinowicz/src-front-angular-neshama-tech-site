@@ -1,4 +1,4 @@
-export interface IProjeto {
+export interface Projeto {
   titulo: string;
   descricao: string;
   tecnologias: string;
