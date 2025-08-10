@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjetoService {
-  private url = 'assets/data/projetos.json';
+  private readonly url = 'assets/data/projetos.json';
 
   constructor(private http: HttpClient) {}
 

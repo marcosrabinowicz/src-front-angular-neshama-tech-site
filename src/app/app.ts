@@ -7,17 +7,27 @@ import { Servicos } from './componentes/servicos/servicos';
 import { Contato } from './componentes/contato/contato';
 
 import AOS from 'aos';
+import { Header } from './shared/header/header';
+import { Footer } from './shared/footer/footer';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Home, Sobre, Portfolio, Servicos, Contato, CommonModule],
+  imports: [
+    Home,
+    Sobre,
+    Portfolio,
+    Servicos,
+    Contato,
+    CommonModule,
+    Header,
+    Footer,
+  ],
 })
 export class App implements OnInit {
   protected readonly title = signal('neshama-tech-site');
   protected showScrollTop = false;
-  protected menuAberto = false;
 
   ngOnInit(): void {
     AOS.init({
@@ -36,13 +46,5 @@ export class App implements OnInit {
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  toggleMenu() {
-    this.menuAberto = !this.menuAberto;
-  }
-
-  fecharMenu() {
-    this.menuAberto = false;
   }
 }

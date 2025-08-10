@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.site-footer {
+  background: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: $spacing-md 0;
+  box-shadow: $shadow-sm;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+}
+
+.social {
+  margin-top: $spacing-xs;
+  display: inline-flex;
+  gap: $spacing-xs;
+  align-items: center;
+
+  a {
+    color: $secondary-color;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    opacity: 0.6;
+  }
+}

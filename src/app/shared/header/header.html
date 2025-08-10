@@ -1,0 +1,17 @@
+<header>
+  <div class="container">
+    <h1>Neshama Tech | Marcos Rabinowicz</h1>
+
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir Menu">
+      &#9776;
+    </button>
+
+    <nav [class.active]="menuAberto">
+      <a href="#home" (click)="fecharMenu()">Início</a>
+      <a href="#sobre" (click)="fecharMenu()">Sobre</a>
+      <a href="#portfolio" (click)="fecharMenu()">Portfólio</a>
+      <a href="#servicos" (click)="fecharMenu()">Serviços</a>
+      <a href="#contato" (click)="fecharMenu()">Contato</a>
+    </nav>
+  </div>
+</header>
