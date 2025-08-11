@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-sobre',
   imports: [],
   templateUrl: './sobre.html',
-  styleUrl: './sobre.scss'
+  styleUrl: './sobre.scss',
 })
-export class Sobre {
-
-}
+export class Sobre {}

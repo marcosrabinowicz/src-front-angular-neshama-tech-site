@@ -3,11 +3,13 @@
 Este é o repositório do site da **Neshama Tech**, a marca pessoal de desenvolvimento de soluções digitais de [Marcos Rabinowicz](https://www.linkedin.com/in/marcos-rabinowicz/).
 
 O site tem como objetivos:
+
 - Apresentar a Neshama Tech e seus serviços
 - Exibir o portfólio de projetos de forma clara e responsiva
 - Criar uma ponte entre o desenvolvedor e suas soluções
 
 ## 🌍 Acesse o site
+
 🔗 [www.neshamatech.com.br](https://www.neshamatech.com.br)
 
 ## 📂 Repositórios de Projetos
@@ -75,3 +77,4 @@ Desenvolvedor & Fundador da Neshama Tech
 🔗 LinkedIn
 
 “Tecnologia com alma, propósito com código.”
+```

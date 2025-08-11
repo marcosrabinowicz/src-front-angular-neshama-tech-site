@@ -1,5 +1,8 @@
 [
-  { "icon": "fas fa-code",  "texto": "Desenvolvimento de aplicações web (Angular, .NET)" },
+  {
+    "icon": "fas fa-code",
+    "texto": "Desenvolvimento de aplicações web (Angular, .NET)"
+  },
   { "icon": "fas fa-cubes", "texto": "Consultoria em arquitetura de software" },
   { "icon": "fas fa-brain", "texto": "Integração de soluções com IA" },
   { "icon": "fas fa-tools", "texto": "Manutenção e treinamento técnico" }

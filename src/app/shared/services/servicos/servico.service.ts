@@ -16,8 +16,8 @@ export class ServicoService {
       .get<Servico[]>(this.url)
       .pipe(
         map((servicos: Servico[]) =>
-          [...servicos].sort((a, b) => (a.ordem ?? 0) - (b.ordem ?? 0))
-        )
+          [...servicos].sort((a, b) => (a.ordem ?? 0) - (b.ordem ?? 0)),
+        ),
       );
   }
 }

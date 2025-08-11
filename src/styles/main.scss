@@ -77,7 +77,10 @@ a:hover {
   background: color-mix(in srgb, var(--col-primary) 28%, var(--col-surface));
   color: var(--col-text);
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 .btn:hover {
   transform: translateY(-1px);

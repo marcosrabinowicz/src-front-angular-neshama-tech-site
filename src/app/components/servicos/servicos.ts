@@ -23,7 +23,7 @@ export class Servicos implements OnInit, AfterViewInit {
 
   constructor(
     private servicoService: ServicoService,
-    private aos: AosService
+    private aos: AosService,
   ) {}
 
   ngAfterViewInit(): void {
