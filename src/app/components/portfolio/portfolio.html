@@ -1,27 +1,82 @@
-<section id="portfolio" class="portfolio-section" data-aos="fade-up">
+<section
+  id="portfolio"
+  class="portfolio-section"
+  aria-labelledby="portfolio-title"
+>
   <div class="container">
-    <h2>Portfólio</h2>
+    <p class="eyebrow">Neshama Tech</p>
+    <h2 class="h2" id="portfolio-title">Portfólio</h2>
+    <p class="lead">Projetos reais — código aberto e demos.</p>
 
-    <div class="cards">
-      <div
-        class="card"
-        *ngFor="let projeto of projetos; let i = index"
+    <!-- Filtros (a partir de 'tecnologias') -->
+    <nav *ngIf="tags.length" class="chips" aria-label="Filtros do portfólio">
+      <ul role="list" class="chips__list">
+        <li *ngFor="let t of tags">
+          <button
+            type="button"
+            class="chip"
+            [class.is-active]="t === selecionada"
+            (click)="aplicarFiltro(t)"
+            [attr.aria-pressed]="t === selecionada"
+          >
+            {{ t }}
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Estados -->
+    <div *ngIf="carregando" class="status">Carregando…</div>
+    <div *ngIf="erro" class="status" role="alert">{{ erro }}</div>
+
+    <!-- Grid -->
+    <ul
+      class="grid aos-stagger"
+      role="list"
+      [attr.aria-label]="'Projetos: ' + selecionada"
+    >
+      <li
+        *ngFor="let p of visiveis; index as i; trackBy: trackByIndex"
+        class="card proj"
         data-aos="fade-up"
-        [attr.data-aos-delay]="i * 100"
+        [style.--i]="i"
+        tabindex="0"
       >
-        <h3>{{ projeto.titulo }}</h3>
-        <p class="descricao">{{ projeto.descricao }}</p>
-        <p class="tecnologias">Tecnologias: {{ projeto.tecnologias }}</p>
+        <header class="proj__hdr">
+          <h3 class="h3 proj__title">{{ p.titulo }}</h3>
+          <ul class="proj__tags" role="list">
+            <li *ngFor="let tag of p.tags">{{ tag }}</li>
+          </ul>
+        </header>
 
-        <div class="card-links">
-          <a [href]="projeto.linkGithub" target="_blank">
-            <i class="fab fa-github"></i> Ver no GitHub
+        <p class="proj__desc" *ngIf="p.descricao">{{ p.descricao }}</p>
+
+        <div class="proj__links">
+          <a
+            *ngIf="p.demo"
+            class="btn"
+            [href]="p.demo"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="'Abrir demo de ' + p.titulo"
+          >
+            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+            <span>Demo</span>
           </a>
-          <a [href]="projeto.demo" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Ver Projeto
+
+          <a
+            *ngIf="p.linkGithub"
+            class="btn"
+            [href]="p.linkGithub"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="'Abrir GitHub de ' + p.titulo"
+          >
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
           </a>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
