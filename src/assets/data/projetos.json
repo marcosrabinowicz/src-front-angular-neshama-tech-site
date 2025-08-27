@@ -27,10 +27,10 @@
     "ordem": 3
   },
   {
-    "titulo": "Store Sales API (Ambev Developer Evaluation)",
+    "titulo": "Store Sales API",
     "descricao": "WebApi .NET 8 com DDD + Clean Architecture, EF Core/PostgreSQL, testes (xUnit/FluentAssertions), Swagger e pipeline (Docker + EF Migrations + Newman).",
     "tecnologias": ".NET 8, C#, ASP.NET Core, EF Core, PostgreSQL, MediatR, FluentValidation, xUnit, FluentAssertions, Swagger/OpenAPI, Docker, GitHub Actions, Newman",
-    "linkGithub": "https://github.com/seu-usuario/ambev-store-sales-api",
+    "linkGithub": "https://github.com/marcos-rabinowicz/src-back-dotnet-developer-store-sales-api",
     "demo": "breve.html",
     "imagem": "assets/img/portfolio/ambev-store-sales-api.jpg",
     "ordem": 4
