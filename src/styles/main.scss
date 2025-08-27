@@ -147,3 +147,25 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .gold-thread { filter: none; }
 }
+
+/* Container padronizado */
+.container {
+  width: min(92vw, $container-max);
+  margin-inline: auto;
+  padding-block: $space-10;
+
+  @include between($bp-tablet, $bp-desktop) {
+    width: min(96vw, $container-max-tablet);
+  }
+  @include down($bp-tablet) {
+    width: 92vw; /* fluido no mobile */
+  }
+}
+
+/* Offsets de âncora compatíveis com header sticky */
+section { scroll-margin-top: 80px; }
+
+/* títulos levemente maiores em desktop */
+.h1 { @include up($bp-desktop) { font-size: clamp(2.4rem, 1.2rem + 3vw, 3.4rem); } }
+.h2 { @include up($bp-desktop) { font-size: clamp(1.7rem, 1.1rem + 2vw, 2.4rem); } }
+

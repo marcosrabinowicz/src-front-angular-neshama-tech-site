@@ -37,11 +37,14 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
-  margin-top: $space-6;
+
+  @include up($bp-tablet)   { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  @include up($bp-desktop)  { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 }
+
 
 .proj {
   padding: 1rem;

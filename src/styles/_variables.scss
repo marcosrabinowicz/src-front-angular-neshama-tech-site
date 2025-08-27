@@ -97,3 +97,11 @@ $shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
   --col-primary: #4f46e5;
   --col-accent: #f59e0b;
 }
+
+/* === Breakpoints (3 medidas) === */
+$bp-tablet: 48em;   // 768px
+$bp-desktop: 75em;  // 1200px
+
+/* Containers */
+$container-max: 1120px;      // desktop
+$container-max-tablet: 960px;

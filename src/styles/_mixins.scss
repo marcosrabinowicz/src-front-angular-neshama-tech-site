@@ -84,3 +84,8 @@
     z-index: -1;
   }
 }
+
+/* Media helpers (mobile-first) */
+@mixin up($min) { @media (min-width: #{$min}) { @content; } }
+@mixin down($max) { @media (max-width: calc(#{$max} - 0.02px)) { @content; } }
+@mixin between($min, $max) { @media (min-width:#{$min}) and (max-width:calc(#{$max} - 0.02px)) { @content; } }
