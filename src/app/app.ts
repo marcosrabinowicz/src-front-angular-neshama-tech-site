@@ -5,10 +5,9 @@ import { Sobre } from './components/sobre/sobre';
 import { Portfolio } from './components/portfolio/portfolio';
 import { Servicos } from './components/servicos/servicos';
 import { Contato } from './components/contato/contato';
-
-import AOS from 'aos';
 import { Header } from './shared/components/header/header';
 import { Footer } from './shared/components/footer/footer';
+import { AosService } from './shared/services/Aos/aos.services';
 
 @Component({
   selector: 'app-root',
@@ -23,16 +22,19 @@ import { Footer } from './shared/components/footer/footer';
     CommonModule,
     Header,
     Footer,
+
   ],
 })
 export class App {
   protected readonly title = signal('neshama-tech-site');
   protected showScrollTop = false;
 
+  constructor(private aos: AosService) {}
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.showScrollTop = window.pageYOffset > 300;
-    AOS.refreshHard?.();
+    this.aos.refreshHard?.();
   }
 
   scrollToTop(): void {

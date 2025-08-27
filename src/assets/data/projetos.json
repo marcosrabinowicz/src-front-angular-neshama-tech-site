@@ -4,7 +4,7 @@
     "descricao": "Projeto de catálogo de livros, desenvolvido com Go.",
     "tecnologias": "Golang",
     "linkGithub": "https://github.com/marcos-rabinowicz/src-back-go-mini-sistema-de-catalogo-versao-modularizada",
-    "demo": "https://exemplo.com/go-catalogo",
+    "demo": "breve.html",
     "imagem": "assets/img/portfolio/ambev-store-sales-api.jpg",
     "ordem": 1
   },
@@ -22,7 +22,7 @@
     "descricao": " Desenvolvida no melhor estilo raiz do interior. Gerencia feirantes e os produtos que cada um vende.",
     "tecnologias": "API RESTful, ASP.NET Core, C#, Entity Framework Core, SQLite",
     "linkGithub": "https://github.com/marcos-rabinowicz/src-back-dotnet-feira-da-roca",
-    "demo": "https://exemplo.com/feira-da-roca",
+    "demo": "breve.html",
     "imagem": "assets/img/portfolio/ambev-store-sales-api.jpg",
     "ordem": 3
   },
@@ -31,7 +31,7 @@
     "descricao": "WebApi .NET 8 com DDD + Clean Architecture, EF Core/PostgreSQL, testes (xUnit/FluentAssertions), Swagger e pipeline (Docker + EF Migrations + Newman).",
     "tecnologias": ".NET 8, C#, ASP.NET Core, EF Core, PostgreSQL, MediatR, FluentValidation, xUnit, FluentAssertions, Swagger/OpenAPI, Docker, GitHub Actions, Newman",
     "linkGithub": "https://github.com/seu-usuario/ambev-store-sales-api",
-    "demo": "https://seu-dominio.com/ambev-sales-api",
+    "demo": "breve.html",
     "imagem": "assets/img/portfolio/ambev-store-sales-api.jpg",
     "ordem": 4
   }
