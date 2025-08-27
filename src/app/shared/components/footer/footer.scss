@@ -1,36 +1,50 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .site-footer {
-  background: $primary-color;
-  color: $secondary-color;
-  text-align: center;
-  padding: $spacing-md 0;
-  box-shadow: $shadow-sm;
+  margin-top: $space-12;
+  border-top: 1px solid var(--col-border);
+  background: color-mix(in srgb, var(--col-bg) 92%, transparent);
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 $spacing-sm;
-}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr auto;
+  gap: 1rem;
+  padding-block: $space-8;
 
-.social {
-  margin-top: $spacing-xs;
-  display: inline-flex;
-  gap: $spacing-xs;
-  align-items: center;
-
-  a {
-    color: $secondary-color;
-    font-weight: 600;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: .75rem;
   }
+}
 
-  span {
-    opacity: 0.6;
+.brand__name { font-weight: 800; letter-spacing: -.01em; }
+.brand__tag  { opacity: .9; font-size: $font-size-90; }
+
+.links {
+  display:flex; flex-wrap:wrap; gap:.6rem 1rem; align-content:flex-start;
+  a {
+    text-decoration:none; color: var(--col-text); opacity:.9;
+    padding: .2rem 0;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.socials { display:flex; flex-wrap:wrap; gap:.4rem; justify-self: end; }
+.btn--ghost {
+  background: transparent; border-color: var(--col-border);
+  padding: .4rem .6rem;
+  &:hover { background: color-mix(in srgb, var(--col-primary) 18%, var(--col-surface)); }
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--col-border);
+  background: color-mix(in srgb, var(--col-bg) 96%, transparent);
+  .bottom__inner {
+    display:flex; justify-content: space-between; align-items:center;
+    padding-block: $space-4;
+    small { opacity: .8; }
+    @media (max-width: 700px) { flex-direction: column; gap:.35rem; }
   }
 }

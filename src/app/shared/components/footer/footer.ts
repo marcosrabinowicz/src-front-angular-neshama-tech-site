@@ -1,11 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
 export class Footer {
   year = new Date().getFullYear();
+
+  toTop(e: Event) {
+    e.preventDefault();
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

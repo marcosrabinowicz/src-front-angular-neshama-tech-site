@@ -1,27 +1,38 @@
-<footer class="site-footer" data-aos="fade-up">
-  <div class="container">
-    <p>© {{ year }} Neshama Tech | Marcos Rabinowicz</p>
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer__grid">
+    <div class="brand">
+      <div class="brand__name">Neshama Tech <span class="sep">|</span> <span>Marcos Rabinowicz</span></div>
+      <div class="brand__tag">Software sob medida, com alma.</div>
+    </div>
 
-    <nav class="social">
-      <a href="mailto:contato@neshamatech.com.br" aria-label="Email"
-        >contato@neshamatech.com.br</a
-      >
-      <span>•</span>
-      <a
-        href="https://linkedin.com/in/marcos-rabinowicz"
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn"
-        >LinkedIn</a
-      >
-      <span>•</span>
-      <a
-        href="https://github.com/marcos-rabinowicz"
-        target="_blank"
-        rel="noopener"
-        aria-label="GitHub"
-        >GitHub</a
-      >
+    <nav class="links" aria-label="Navegação do rodapé">
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
     </nav>
+
+    <div class="socials">
+      <a class="btn btn--ghost" href="mailto:contato@neshamatech.com.br" [attr.aria-label]="'Email'">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn--ghost" href="https://github.com/marcos-rabinowicz" target="_blank" rel="noopener" [attr.aria-label]="'GitHub'">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/company/neshamatech" target="_blank" rel="noopener" [attr.aria-label]="'LinkedIn'">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn--ghost" href="#" (click)="toTop($event)" [attr.aria-label]="'Voltar ao topo'">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container bottom__inner">
+      <small>© {{ year }} Neshama Tech. Feito com Angular.</small>
+      <small><a href="#contato">contato@neshamatech.com.br</a></small>
+    </div>
   </div>
 </footer>

@@ -1,31 +1,67 @@
-<section id="contato" class="contato-section" data-aos="fade-up">
-  <div class="container">
-    <h2>Contato</h2>
+<section id="contato" class="contato-section" aria-labelledby="contato-title">
+  <div class="container contato__grid">
 
-    <p>
-      Entre em contato pelo e-mail:
-      <a href="mailto:contato@neshamatech.com.br">contato@neshamatech.com.br</a>
-    </p>
+    <div class="contato__intro" data-aos="fade-right">
+      <p class="eyebrow">Vamos conversar</p>
+      <h2 class="h2" id="contato-title">Contato</h2>
+      <p class="lead">Fale com a Neshama Tech. Respondo rápido 🙂</p>
 
-    <p>Ou conecte-se pelas redes sociais:</p>
+      <div class="socials" data-aos="fade-up" data-aos-delay="120">
+        <a class="btn" href="mailto:contato@neshamatech.com.br"
+           [attr.aria-label]="'Enviar e-mail'">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>Email</span>
+        </a>
 
-    <div class="social-links">
-      <a
-        href="https://linkedin.com/in/marcos-rabinowicz"
-        target="_blank"
-        aria-label="LinkedIn"
-        class="social-button linkedin"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a
-        href="https://github.com/marcos-rabinowicz"
-        target="_blank"
-        aria-label="GitHub"
-        class="social-button github"
-      >
-        <i class="fab fa-github"></i>
-      </a>
+        <a class="btn" href="https://github.com/marcos-rabinowicz" target="_blank" rel="noopener"
+           [attr.aria-label]="'Ver GitHub'">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+        <a class="btn" href="https://www.linkedin.com/company/neshamatech" target="_blank" rel="noopener"
+           [attr.aria-label]="'Ver LinkedIn'">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+        
+        <a class="btn" href="https://wa.me/5521996603157" target="_blank" rel="noopener"
+           [attr.aria-label]="'Chamar no WhatsApp'">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <span>WhatsApp</span>
+        </a>
+
+      </div>
     </div>
+
+    
+    <form class="card contato__form" (submit)="enviar($event)" data-aos="fade-left">
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" [(ngModel)]="nome" required
+               [attr.aria-required]="'true'" />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" [(ngModel)]="email" required
+               [attr.aria-required]="'true'" />
+      </div>
+
+      <div class="field">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5"
+                  [(ngModel)]="mensagem" required [attr.aria-required]="'true'"></textarea>
+      </div>
+
+      <div class="form__actions">
+        <button class="btn btn--primary" type="submit" [attr.aria-label]="'Enviar mensagem'">Enviar</button>
+        <a class="btn btn--ghost" href="mailto:contato@neshamatech.com.br"
+           [attr.aria-label]="'Abrir cliente de e-mail'">
+          Abrir e-mail
+        </a>
+      </div>
+
+      <p class="hint">Dica: se preferir, mande direto para <strong>contato@neshamatech.com.br</strong>.</p>
+    </form>
   </div>
 </section>
