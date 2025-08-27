@@ -1,20 +1,56 @@
-<section
-  id="sobre"
-  class="sobre-section"
-  data-aos="fade-right"
-  data-aos-delay="600"
->
-  <div class="container">
-    <h2>Sobre a Neshama Tech</h2>
-    <p>
-      A Neshama Tech é uma iniciativa com alma voltada para o desenvolvimento de
-      soluções digitais com propósito. Conectamos tecnologia e valores para
-      criar experiências relevantes e humanas.
-    </p>
-    <p>
-      Liderada por <strong>Marcos Rabinowicz</strong>, a Neshama Tech se
-      especializa em desenvolvimento full stack, pautado por inclusão e uma
-      visão de mundo fundamentada em ética e criatividade.
-    </p>
+<section id="sobre" class="sobre-section" aria-labelledby="sobre-title">
+  <div class="container sobre__grid">
+
+    <div class="sobre__copy" data-aos="fade-right">
+      <p class="eyebrow">Quem somos</p>
+      <h2 class="h2" id="sobre-title">Sobre a Neshama Tech</h2>
+
+      <p class="lead">
+        Um estúdio de software que une <strong>tecnologia</strong> e
+        <strong>propósito</strong>. Construímos sites e APIs sob medida, com
+        acessibilidade, performance e um toque de storytelling.
+      </p>
+
+      <ul class="sobre__bullets" role="list" data-aos="fade-up" data-aos-delay="120">
+        <li>Front-end em Angular/React, animações AOS e SEO de base.</li>
+        <li>APIs em .NET/Node/Go com documentação (Swagger) e boas práticas.</li>
+        <li>Deploy simples (GitHub Pages) e foco na experiência do dev/cliente.</li>
+      </ul>
+
+      <div class="sobre__ctas" data-aos="fade-up" data-aos-delay="180">
+        <a href="#portfolio" class="btn btn--primary"
+           (click)="scrollTo($event, '#portfolio')"
+           [attr.aria-label]="'Ver portfólio'">Ver portfólio</a>
+        <a href="#contato" class="btn btn--ghost"
+           (click)="scrollTo($event, '#contato')"
+           [attr.aria-label]="'Ir para contato'">Falar com a Neshama Tech</a>
+      </div>
+    </div>
+
+    <aside class="sobre__side" data-aos="fade-left" data-aos-delay="80">
+
+      <div class="pillgroup" aria-label="Princípios">
+        <span class="pill"><i class="fa-solid fa-heart" aria-hidden="true"></i> Humana</span>
+        <span class="pill"><i class="fa-solid fa-hands" aria-hidden="true"></i> Ética</span>
+        <span class="pill"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Simples</span>
+        <span class="pill"><i class="fa-solid fa-shield" aria-hidden="true"></i> Confiável</span>
+      </div>
+
+      <div class="stats" aria-label="Indicadores">
+        <div class="stat">
+          <span class="stat__num">+10</span>
+          <span class="stat__label">repos públicos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">3</span>
+          <span class="stat__label">stacks principais</span>
+        </div>
+      </div>
+
+      <figure class="selo" aria-hidden="true">
+        <div class="selo__glow"></div>
+        <figcaption class="selo__txt">Neshama Tech</figcaption>
+      </figure>
+    </aside>
   </div>
 </section>
