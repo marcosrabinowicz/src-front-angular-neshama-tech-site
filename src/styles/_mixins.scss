@@ -53,3 +53,34 @@
 .aos-stagger > * {
   transition-delay: calc(var(--i, 0) * 80ms);
 }
+
+/* Fio dourado (linha com glow sutil) */
+@mixin gold-thread($w: 420px, $h: 2px) {
+  width: $w; height: $h; background: var(--gold-thread);
+  border-radius: 999px;
+  filter: saturate(1.2) drop-shadow(0 0 8px rgba(243,227,185,.18));
+}
+
+/* Sublinhado dourado para títulos (usa ::after) */
+@mixin gold-underline {
+  position: relative;
+  &::after{
+    content: ""; position: absolute; left: 0; bottom: -.35rem;
+    @include gold-thread(120px, 2px);
+  }
+}
+
+/* Anel de luz dourado (para selo/ilha decorativa) */
+@mixin gold-ring($size: 160px){
+  position: relative; isolation: isolate;
+  &::before{
+    content: ""; position: absolute; inset: 0; margin: auto;
+    width: $size; height: $size; border-radius: 50%;
+    background:
+      radial-gradient(closest-side, rgba(243,227,185,.28), transparent 60%),
+      conic-gradient(from 180deg,
+        transparent 0 35%, rgba(227,199,137,.7) 36% 64%, transparent 65% 100%);
+    filter: blur(0.6px) drop-shadow(0 0 12px rgba(243,227,185,.22));
+    z-index: -1;
+  }
+}

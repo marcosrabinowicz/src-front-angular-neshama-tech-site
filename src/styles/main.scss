@@ -116,3 +116,34 @@ a:hover {
     animation: none !important;
   }
 }
+
+/* ...depois dos imports */
+.u-gold-underline { @include gold-underline; }
+
+/* fios posicionáveis (para cantos do Hero/Sobre ou cards) */
+.gold-thread { position: absolute; pointer-events: none; @include gold-thread(); opacity:.85; }
+.gold-thread--thin { @include gold-thread(360px, 1px); opacity:.75; }
+.gold-thread--thick { @include gold-thread(520px, 3px); }
+
+/* variantes de orientação */
+.gold-thread.-tl { top: 8%; left: 6%; transform: rotate(-8deg); }
+.gold-thread.-tr { top: 12%; right: 6%; transform: rotate(8deg); }
+.gold-thread.-bl { bottom: 10%; left: 4%; transform: rotate(7deg); }
+.gold-thread.-br { bottom: 8%; right: 8%; transform: rotate(-10deg); }
+
+/* botão com “toque” dourado no hover */
+.btn--primary:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold-1) 50%, var(--col-border)),
+                                  0 4px 16px rgba(243,227,185,.18); }
+.btn--ghost:hover   { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold-1) 35%, var(--col-border)); }
+
+/* borda superior do footer com fio dourado */
+.site-footer { position: relative; }
+.site-footer::before{
+  content:""; position:absolute; left:50%; transform:translateX(-50%);
+  top:-1px; @include gold-thread(min(680px, 92vw), 2px);
+}
+
+/* respeito a redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  .gold-thread { filter: none; }
+}
