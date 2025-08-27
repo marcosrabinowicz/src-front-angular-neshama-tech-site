@@ -1,17 +1,45 @@
-<header>
-  <div class="container">
-    <h1>Neshama Tech | Marcos Rabinowicz</h1>
+<a class="skip-link" href="#home">Pular para o conteúdo</a>
 
-    <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir Menu">
-      &#9776;
+<header class="site-header" [class.is-scrolled]="scrolled" role="banner">
+  <div class="container header__inner">
+    <div class="brand">
+      <a href="#home" (click)="onLinkClick($event, '#home')" class="brand__link">
+        <span class="brand__title">Neshama Tech</span>
+        <span class="brand__subtitle">| Marcos Rabinowicz</span>
+      </a>
+    </div>
+
+    <button
+      class="menu-toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="site-nav"
+      aria-label="Abrir menu de navegação"
+    >
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
     </button>
 
-    <nav [class.active]="menuAberto">
-      <a href="#home" (click)="fecharMenu()">Início</a>
-      <a href="#sobre" (click)="fecharMenu()">Sobre</a>
-      <a href="#portfolio" (click)="fecharMenu()">Portfólio</a>
-      <a href="#servicos" (click)="fecharMenu()">Serviços</a>
-      <a href="#contato" (click)="fecharMenu()">Contato</a>
+    <nav
+      id="site-nav"
+      class="nav"
+      [class.is-open]="menuOpen"
+      aria-label="Seções do site"
+    >
+      <ul class="nav__list" role="list">
+        <li *ngFor="let item of nav">
+          <a
+            href="{{item.href}}"
+            (click)="onLinkClick($event, item.href)"
+            class="nav__link"
+            [class.is-active]="activeId === item.id"
+            [attr.aria-current]="activeId === item.id ? 'page' : null"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
