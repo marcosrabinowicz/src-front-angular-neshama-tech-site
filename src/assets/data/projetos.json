@@ -27,7 +27,7 @@
     "ordem": 3
   },
   {
-    "titulo": "Store Sales API",
+    "titulo": "Dotnet - Store Sales API",
     "descricao": "WebApi .NET 8 com DDD + Clean Architecture, EF Core/PostgreSQL, testes (xUnit/FluentAssertions), Swagger e pipeline (Docker + EF Migrations + Newman).",
     "tecnologias": ".NET 8, C#, ASP.NET Core, EF Core, PostgreSQL, MediatR, FluentValidation, xUnit, FluentAssertions, Swagger/OpenAPI, Docker, GitHub Actions, Newman",
     "linkGithub": "https://github.com/marcos-rabinowicz/src-back-dotnet-developer-store-sales-api",
