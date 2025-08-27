@@ -34,7 +34,9 @@ O site tem como objetivos:
 ## 📁 Estrutura do Projeto
 
 src/
-├── app/ # Componentes principais por seção (home, sobre, etc.)
+├── app/ # Componentes principais da aplicação
+├── app/components/ # Componentes compartilhado na aplicação
+├── app/shared/ # Componentes compartilhado na aplicação
 ├── assets/ # Imagens e JSON de projetos
 ├── styles/ # Estilos globais e SCSS modularizado
 └── environments/ # Configurações por ambiente
