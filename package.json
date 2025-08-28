@@ -4,8 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /",
     "watch": "ng build --watch --configuration development",
+    "pages": "npm run build && if [ -d docs/browser ]; then rsync -a docs/browser/ docs/ && rm -rf docs/browser; fi && if [ -f CNAME ]; then cp -f CNAME docs/CNAME; elif [ -f src/static/CNAME ]; then cp -f src/static/CNAME docs/CNAME; fi && git add docs -f && git commit -m \"build(docs): publish\" && git push",
+    "release:patch": "npm version patch -m \"chore(release): v%s\" && npm run pages && git push --tags",
+    "release:minor": "npm version minor -m \"chore(release): v%s\" && npm run pages && git push --tags",
+    "release:major": "npm version major -m \"chore(release): v%s\" && npm run pages && git push --tags",
     "test": "ng test"
   },
   "prettier": {
