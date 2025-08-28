@@ -21,7 +21,6 @@ body {
   background: var(--col-bg);
 }
 
-/* Títulos em serif (harmonizam com a logo) */
 .h1,
 .h2,
 .h3 {
@@ -64,14 +63,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container */
 .container {
   width: min(1120px, 92vw);
   margin-inline: auto;
   padding-block: $space-10;
 }
 
-/* Botão */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -95,7 +92,6 @@ a:hover {
   @include focus-ring;
 }
 
-/* Cards */
 .card {
   @include card;
 }
@@ -106,7 +102,6 @@ a:hover {
   opacity: 0.88;
 }
 
-/* Acessibilidade */
 :focus-visible {
   @include focus-ring;
 }
@@ -117,38 +112,31 @@ a:hover {
   }
 }
 
-/* ...depois dos imports */
 .u-gold-underline { @include gold-underline; }
 
-/* fios posicionáveis (para cantos do Hero/Sobre ou cards) */
 .gold-thread { position: absolute; pointer-events: none; @include gold-thread(); opacity:.85; }
 .gold-thread--thin { @include gold-thread(360px, 1px); opacity:.75; }
 .gold-thread--thick { @include gold-thread(520px, 3px); }
 
-/* variantes de orientação */
 .gold-thread.-tl { top: 8%; left: 6%; transform: rotate(-8deg); }
 .gold-thread.-tr { top: 12%; right: 6%; transform: rotate(8deg); }
 .gold-thread.-bl { bottom: 10%; left: 4%; transform: rotate(7deg); }
 .gold-thread.-br { bottom: 8%; right: 8%; transform: rotate(-10deg); }
 
-/* botão com “toque” dourado no hover */
 .btn--primary:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold-1) 50%, var(--col-border)),
                                   0 4px 16px rgba(243,227,185,.18); }
 .btn--ghost:hover   { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold-1) 35%, var(--col-border)); }
 
-/* borda superior do footer com fio dourado */
 .site-footer { position: relative; }
 .site-footer::before{
   content:""; position:absolute; left:50%; transform:translateX(-50%);
   top:-1px; @include gold-thread(min(680px, 92vw), 2px);
 }
 
-/* respeito a redução de movimento */
 @media (prefers-reduced-motion: reduce) {
   .gold-thread { filter: none; }
 }
 
-/* Container padronizado */
 .container {
   width: min(92vw, $container-max);
   margin-inline: auto;
@@ -158,14 +146,12 @@ a:hover {
     width: min(96vw, $container-max-tablet);
   }
   @include down($bp-tablet) {
-    width: 92vw; /* fluido no mobile */
+    width: 92vw;
   }
 }
 
-/* Offsets de âncora compatíveis com header sticky */
 section { scroll-margin-top: 80px; }
 
-/* títulos levemente maiores em desktop */
 .h1 { @include up($bp-desktop) { font-size: clamp(2.4rem, 1.2rem + 3vw, 3.4rem); } }
 .h2 { @include up($bp-desktop) { font-size: clamp(1.7rem, 1.1rem + 2vw, 2.4rem); } }
 

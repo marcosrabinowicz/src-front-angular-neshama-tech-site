@@ -1,36 +1,27 @@
-// Cores base
-$primary-color: #0e2a47; // Azul escuro
-$secondary-color: #f3e8dd; // Bege claro
-$highlight-color: #ffcc70; // Amarelo suave
-$text-color: #f9f9f9; // Branco suave
+$primary-color: #0e2a47;
+$secondary-color: #f3e8dd;
+$highlight-color: #ffcc70;
+$text-color: #f9f9f9;
 
-// Tipografia
 $font-family-base: "Segoe UI", Roboto, sans-serif;
 $font-size-base: 16px;
 
-// Tipografia
 $font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
 $font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
-// Espaçamentos
 $spacing-xs: 0.5rem;
 $spacing-sm: 1rem;
 $spacing-md: 2rem;
 $spacing-lg: 4rem;
 
-// Bordas
 $border-radius: 0.75rem;
 
-// Sombra
 $shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
 
-/* === Fontes === */
 $font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-/* Título serif para combinar com a logo */
 $font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
 
-/* === Tipografia === */
 $font-size-300: clamp(2.2rem, 1.1rem + 3vw, 3.2rem);
 $font-size-200: clamp(1.6rem, 1rem + 2vw, 2.2rem);
 $font-size-150: clamp(1.3rem, 0.9rem + 1vw, 1.6rem);
@@ -42,7 +33,6 @@ $line-tight: 1.15;
 $line-snug: 1.25;
 $line-normal: 1.5;
 
-/* === Espaçamento === */
 $space-0: 0;
 $space-1: 0.25rem;
 $space-2: 0.5rem;
@@ -53,25 +43,23 @@ $space-8: 2rem;
 $space-10: 2.5rem;
 $space-12: 3rem;
 
-/* === Raio/Sombra === */
 $radius-md: 12px;
 $radius-lg: 16px;
 $shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
 $shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
 $shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
 
-/* === Tema Neshama Blue & Flame === */
 :root {
-  --col-primary: #e3c789; /* dourado chama */
-  --col-accent: #fdfef6; /* glow leve / links */
-  --col-text: #f7f3e5; /* marfim */
-  --col-bg: #0b263f; /* azul profundo */
-  --col-surface: #102c48; /* card */
-  --col-border: #1e3a56; /* borda */
+  --col-primary: #e3c789;
+  --col-accent: #fdfef6;
+  --col-text: #f7f3e5;
+  --col-bg: #0b263f;
+  --col-surface: #102c48;
+  --col-border: #1e3a56;
 
-  --gold-1: #E3C789; /* base */
-  --gold-2: #F3E3B9; /* luz */
-  --gold-3: #C9A55E; /* sombra */
+  --gold-1: #E3C789;
+  --gold-2: #F3E3B9;
+  --gold-3: #C9A55E;
   --gold-thread: linear-gradient(
     90deg,
     rgba(227,199,137,0) 0%,
@@ -88,7 +76,6 @@ $shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
   --shadow-lg: #{$shadow-lg};
 }
 
-/* Tema claro alternativo (se quiser testar depois) */
 .theme-light {
   --col-bg: #f8fafc;
   --col-surface: #ffffff;
@@ -98,10 +85,8 @@ $shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
   --col-accent: #f59e0b;
 }
 
-/* === Breakpoints (3 medidas) === */
-$bp-tablet: 48em;   // 768px
-$bp-desktop: 75em;  // 1200px
+$bp-tablet: 48em;
+$bp-desktop: 75em;
 
-/* Containers */
-$container-max: 1120px;      // desktop
+$container-max: 1120px;
 $container-max-tablet: 960px;

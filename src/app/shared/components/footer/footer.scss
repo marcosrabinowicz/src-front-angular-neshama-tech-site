@@ -1,12 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.site-footer {
-  margin-top: $space-12;
-  border-top: 1px solid var(--col-border);
-  background: color-mix(in srgb, var(--col-bg) 92%, transparent);
-}
-
 .footer__grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr auto;
@@ -47,4 +41,65 @@
     small { opacity: .8; }
     @media (max-width: 700px) { flex-direction: column; gap:.35rem; }
   }
+}
+
+.site-footer {
+  margin-top: $space-12;
+  position: relative;
+  border-top: 1px solid var(--col-border);
+  background: color-mix(in srgb, var(--col-bg) 92%, transparent);
+
+  &::before{
+    content:""; position:absolute; left:50%; transform:translateX(-50%);
+    top:-1px; @include gold-thread(min(680px, 92vw), 2px); @include gold-thread-anim(12s, 2s);
+  }
+}
+
+.top__inner {
+  display: flex;
+  align-items: baseline;          
+  gap: 1rem;
+  padding-block: $space-8;
+}
+
+.brand__name { font-weight: 800; letter-spacing: -.01em; }
+.brand__tag  { opacity: .9; font-size: $font-size-90; }
+
+.links { margin-left: auto; }     
+.links__list {
+  display: flex; gap: 1.1rem;
+  list-style: none; margin: 0; padding: 0;
+
+  a {
+    text-decoration: none; color: var(--col-text);
+    padding: .2rem .1rem; border-radius: 8px;
+    transition: background .15s ease, transform .1s ease;
+    &:hover { background: color-mix(in srgb, var(--col-primary) 22%, var(--col-surface)); transform: translateY(-1px); }
+  }
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--col-border);
+  background: color-mix(in srgb, var(--col-bg) 96%, transparent);
+}
+.bottom__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-block: $space-4;
+
+  small { opacity: .8; }
+}
+
+.socials { display: flex; gap: .4rem; }
+.btn--ghost {
+  background: transparent; border-color: var(--col-border);
+  padding: .4rem .6rem;
+  &:hover { background: color-mix(in srgb, var(--col-primary) 18%, var(--col-surface)); }
+}
+
+@include down($bp-tablet) {
+  .top__inner { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .links { margin-left: 0; } 
+  .links__list { flex-wrap: wrap; gap: .5rem 1rem; }
+
+  .bottom__inner { flex-direction: column; gap: .5rem; align-items: flex-start; }
 }

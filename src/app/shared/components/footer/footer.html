@@ -1,35 +1,38 @@
 <footer class="site-footer" role="contentinfo">
-  <div class="container footer__grid">
-    <div class="brand">
-      <div class="brand__name">Neshama Tech <span class="sep">| </span> <span>Marcos Rabinowicz</span></div>
-      <div class="brand__tag">Software sob medida, com alma.</div>
-    </div>
+  <div class="footer__top">
+    <div class="container top__inner">
+      <div class="brand">
+        <div class="brand__name">Neshama Tech <span class="sep">|</span> <span>Marcos Rabinowicz</span></div>
+        <div class="brand__tag">Software sob medida, com alma.</div>
+      </div>
 
-    <nav class="links" aria-label="Navegação do rodapé">
-      <a href="#home">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
-    </nav>
-
-    <div class="socials">
-      <a class="btn btn--ghost" href="mailto:contato@neshamatech.com.br" [attr.aria-label]="'Email'">
-        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-      </a>
-      <a class="btn btn--ghost" href="https://github.com/marcos-rabinowicz" target="_blank" rel="noopener" [attr.aria-label]="'GitHub'">
-        <i class="fab fa-github" aria-hidden="true"></i>
-      </a>
-      <a class="btn btn--ghost" href="https://www.linkedin.com/company/neshamatech" target="_blank" rel="noopener" [attr.aria-label]="'LinkedIn'">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-      </a>
+      <nav class="links" aria-label="Navegação do rodapé">
+        <ul class="links__list" role="list">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 
   <div class="footer__bottom">
     <div class="container bottom__inner">
-      <small>© {{ year }} Neshama Tech. Feito com Angular.</small>
-      <small><a href="#contato">contato@neshamatech.com.br</a></small>
+      <small>© {{ year }} Marcos Rabinowicz. Feito com Angular.</small>
+
+      <div class="socials" aria-label="Perfis pessoais">
+        <a class="btn btn--ghost" href="mailto:marcosrabinowicz.works@gmail.com" [attr.aria-label]="'Email'">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/marcos-rabinowicz" target="_blank" rel="noopener" [attr.aria-label]="'GitHub de Marcos Rabinowicz'">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/marcos-rabinowicz/" target="_blank" rel="noopener" [attr.aria-label]="'LinkedIn de Marcos Rabinowicz'">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
