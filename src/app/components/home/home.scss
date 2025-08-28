@@ -17,14 +17,13 @@
   filter: saturate(1.05);
 }
 
-.hero__grid {
-  display: grid;
+.hero__grid{
+  display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(1rem, 3vw, 2rem);
 
-  @include down($bp-tablet) { grid-template-columns: 1fr; }
+  @include down($bp-tablet){ grid-template-columns: 1fr; }
 }
-
 
 .hero__title {
   margin: .25rem 0 .5rem;

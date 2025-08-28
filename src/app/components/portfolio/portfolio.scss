@@ -36,15 +36,18 @@
   }
 }
 
-.grid {
+.grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem; margin-top: $space-6;
 
-  @include up($bp-tablet)   { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-  @include up($bp-desktop)  { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  @include up($bp-tablet){  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  @include up($bp-desktop){ grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
 }
 
+@include down($bp-tablet){
+  .proj__overlay{ background: linear-gradient(to top, rgba(0,0,0,.5) 0, rgba(0,0,0,.12) 60%, transparent); }
+}
 
 .proj {
   padding: 1rem;

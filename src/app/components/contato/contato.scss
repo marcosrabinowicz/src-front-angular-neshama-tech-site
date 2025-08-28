@@ -3,11 +3,12 @@
 
 .contato-section { padding-block: $space-12; }
 
-.contato__grid {
-  display: grid;
+.contato__grid{
+  display:grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(1rem, 3vw, 2rem);
-  @media (max-width: 980px) { grid-template-columns: 1fr; }
+
+  @include down($bp-tablet){ grid-template-columns: 1fr; }
 }
 
 .socials { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: $space-4; }

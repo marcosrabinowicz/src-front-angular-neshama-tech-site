@@ -56,14 +56,18 @@
   }
 }
 
-/* Mobile = até tablet-1 */
-@include down($bp-tablet) {
+/* Mobile & até tablet */
+@include down($bp-tablet){
   .menu-toggle { display:flex; }
-  .nav {
-    position: absolute; inset: 60px 0 auto 0; padding: .5rem 1rem; display: none;
-    .nav__list { flex-direction: column; gap:.25rem; }
+  .nav{
+    position:absolute; inset:60px 0 auto 0; padding:.5rem 1rem; display:none;
+    .nav__list{ flex-direction:column; gap:.25rem; }
     background: color-mix(in srgb, var(--col-bg) 92%, transparent);
-    border-bottom: 1px solid var(--col-border);
+    border-bottom:1px solid var(--col-border);
   }
-  .nav.is-open { display: block; }
+  .nav.is-open{ display:block; }
+}
+
+@include up($bp-desktop){
+  .nav .nav__list{ gap: 1.25rem; }
 }

@@ -5,12 +5,16 @@
   padding-block: $space-12;
 }
 
-.sobre__grid {
-  display: grid;
+.sobre__grid{
+  display:grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(1rem, 3vw, 2rem);
 
-  @media (max-width: 980px) { grid-template-columns: 1fr; }
+  @include down($bp-tablet){ grid-template-columns: 1fr; }
+}
+
+@include up($bp-desktop){
+  .selo{ height: 160px; }
 }
 
 .sobre__copy .lead { max-width: 60ch; }

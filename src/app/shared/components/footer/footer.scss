@@ -66,6 +66,7 @@
 .brand__tag  { opacity: .9; font-size: $font-size-90; }
 
 .links { margin-left: auto; }     
+
 .links__list {
   display: flex; gap: 1.1rem;
   list-style: none; margin: 0; padding: 0;
@@ -102,4 +103,8 @@
   .links__list { flex-wrap: wrap; gap: .5rem 1rem; }
 
   .bottom__inner { flex-direction: column; gap: .5rem; align-items: flex-start; }
+}
+
+@include up($bp-desktop){
+  .links__list{ gap: 1.25rem; }
 }
