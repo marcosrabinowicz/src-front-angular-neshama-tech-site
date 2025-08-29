@@ -1,0 +1,86 @@
+<section id="autor" class="autor-section" aria-labelledby="autor-title">
+  <div
+    class="gold-thread gold-thread--thin gold-animate -tl"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="gold-thread gold-thread--thin gold-animate gold-animate--slow -br"
+    aria-hidden="true"
+  ></div>
+
+  <div class="container autor__grid" *ngIf="dados as a">
+    <aside class="autor__side" data-aos="fade-right">
+      <figure
+        class="autor__avatar"
+        [class.has-foto]="a.foto"
+        aria-label="Foto do autor"
+        role="img"
+      >
+        <img *ngIf="a.foto" [src]="a.foto" alt="" />
+        <div *ngIf="!a.foto" class="autor__placeholder" aria-hidden="true">
+          MR
+        </div>
+      </figure>
+      <ul class="autor__links" role="list">
+        <li *ngFor="let l of a.links">
+          <a
+            class="btn btn--ghost"
+            [href]="l.href"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="l.label"
+          >
+            <i *ngIf="l.icon" [class]="l.icon" aria-hidden="true"></i>
+            <span>{{ l.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="autor__copy" data-aos="fade-left">
+      <p class="eyebrow">Sobre o Autor</p>
+      <h2 class="h2 u-gold-underline" id="autor-title">{{ a.nome }}</h2>
+      <p class="autor__meta">
+        <span *ngIf="a.titulo">{{ a.titulo }}</span>
+        <span *ngIf="a.local">· {{ a.local }}</span>
+      </p>
+      <p class="lead autor__tagline" *ngIf="a.tagline">{{ a.tagline }}</p>
+
+      <p class="autor__bio-curta">{{ a.bio_curta }}</p>
+
+      <ul
+        *ngIf="a.destaques?.length"
+        class="pillgroup"
+        role="list"
+        data-aos="fade-up"
+        data-aos-delay="80"
+      >
+        <li class="pill" *ngFor="let d of a.destaques">
+          <i *ngIf="d.icon" [class]="d.icon" aria-hidden="true"></i>
+          <span class="sr-only">{{ d.label }}: </span>{{ d.value || d.label }}
+        </li>
+      </ul>
+
+      <div class="autor__long">
+        <button
+          class="btn btn--primary autor__toggle"
+          (click)="toggle($event)"
+          [attr.aria-expanded]="expandido"
+          [attr.aria-controls]="'autor-longtext'"
+        >
+          {{ expandido ? "Ocultar história" : "Ler história completa" }}
+        </button>
+
+        <div [id]="'autor-longtext'" [hidden]="!expandido">
+          <p
+            *ngFor="let p of a.bio_longa"
+            class="autor__bio-longa"
+            data-aos="fade-up"
+          >
+            {{ p }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

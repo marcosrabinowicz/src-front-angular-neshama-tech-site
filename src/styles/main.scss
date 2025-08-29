@@ -205,3 +205,9 @@ section {
     font-size: clamp(1.7rem, 1.1rem + 2vw, 2.4rem);
   }
 }
+
+[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

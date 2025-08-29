@@ -138,3 +138,54 @@
   animation: gold-thread-shimmer var(--gold-dur, #{$dur}) ease-in-out
     var(--gold-delay, #{$delay}) infinite;
 }
+
+@mixin gold-ring($size: 160px) {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background:
+      radial-gradient(closest-side, rgba(243, 227, 185, 0.28), transparent 60%),
+      conic-gradient(
+        from 180deg,
+        transparent 0 35%,
+        rgba(227, 199, 137, 0.7) 36% 64%,
+        transparent 65% 100%
+      );
+    filter: blur(0.6px) drop-shadow(0 0 12px rgba(243, 227, 185, 0.22));
+    z-index: -1;
+  }
+}
+
+@keyframes gold-ring-sweep {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.85;
+  }
+}
+
+@mixin gold-ring-anim($dur: 16s, $delay: 0.8s) {
+  &::before {
+    animation: gold-ring-sweep var(--gold-ring-dur, #{$dur}) linear
+      var(--gold-ring-delay, #{$delay}) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .selo--gold::before {
+    animation: none !important;
+  }
+}

@@ -8,6 +8,7 @@ import { Contato } from './components/contato/contato';
 import { Header } from './shared/components/header/header';
 import { Footer } from './shared/components/footer/footer';
 import { AosService } from './shared/services/Aos/aos.services';
+import { Autor } from './components/autor/autor';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { AosService } from './shared/services/Aos/aos.services';
     CommonModule,
     Header,
     Footer,
+    Autor,
   ],
 })
 export class App {

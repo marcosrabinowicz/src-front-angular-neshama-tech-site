@@ -1,0 +1,110 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.autor-section {
+  position: relative;
+  padding-block: $space-12;
+}
+
+.autor__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  @include down($bp-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.autor__side {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.autor__avatar {
+  display: grid;
+  place-items: center;
+  width: min(240px, 90%);
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  border-radius: 50%;
+  background: color-mix(
+    in srgb,
+    var(--col-surface) 90%,
+    var(--col-primary) 10%
+  );
+  border: 1px solid var(--col-border);
+  overflow: hidden;
+  @include gold-ring(180px);
+  @include gold-ring-anim(18s, 1.2s);
+
+  &.has-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.autor__placeholder {
+  font-family: $font-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+.autor__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autor__meta {
+  opacity: 0.9;
+  margin: 0.25rem 0 0.5rem;
+}
+.autor__tagline {
+  margin: 0 0 0.5rem;
+}
+.autor__bio-curta {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.pillgroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid
+    color-mix(in srgb, var(--col-primary) 40%, var(--col-border));
+  background: color-mix(in srgb, var(--col-primary) 24%, var(--col-surface));
+  color: var(--col-text);
+  font-size: $font-size-90;
+}
+
+.autor__long {
+  margin-top: $space-6;
+}
+.autor__toggle {
+  margin-bottom: 0.5rem;
+}
+.autor__bio-longa {
+  margin: 0.5rem 0;
+  opacity: 0.95;
+}
+
+.autor-section :focus-visible {
+  @include focus-ring;
+}

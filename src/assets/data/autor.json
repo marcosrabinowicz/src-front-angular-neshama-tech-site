@@ -1,0 +1,31 @@
+{
+  "nome": "Marcos Rabinowicz",
+  "titulo": "Analista de Sistemas & Desenvolvedor",
+  "local": "Rio de Janeiro, RJ — Brasil",
+  "tagline": "Tecnologia com alma. Família, fé e natureza.",
+  "bio_curta": "Sou desenvolvedor e analista de sistemas. Valorizo família, fé e educação. Vim da Educação Física para o software — e levo propósito, acessibilidade e clareza para tudo que construo.",
+  "bio_longa": [
+    "Nascido e criado no município do Rio de Janeiro, valorizo profundamente a família, a cultura e a educação. Sou pai desde 15 de dezembro de 2017 e casado. Judeu, trago a fé e as histórias do meu povo como pilares da vida.",
+    "Atuo como analista de sistemas e desenvolvedor de softwares. Fascinam-me a evolução constante da tecnologia e seu impacto real. Sou formado em Educação Física, mas mudei de rota — e esse caminho me trouxe desafios e realizações.",
+    "Tenho interesse por desenvolvimento de games, filosofia e, especialmente, pelas histórias do povo judeu. Sigo atualizado nas notícias de tecnologia, essenciais à minha profissão.",
+    "Sou torcedor do Fluminense FC. Amo natureza e cavalos; cavalgar me traz paz. Pratico corrida, pedal e musculação.",
+    "Gosto de tereré, chimarrão, mate, café e vinhos kasher — parte dos meus momentos de relaxamento.",
+    "Sonho em ser fazendeiro, trabalhar com a terra e ter gado. Planto sempre que posso e me alegra ver a vida florescer.",
+    "Já pratiquei Capoeira — disciplina e comunidade ficaram comigo.",
+    "Quero aprimorar comunicação para evoluir em liderança (líder técnico, arquiteto de soluções/software, gestão de projetos). Comunicação eficaz é chave.",
+    "Desejo contribuir para um planeta melhor. Pequenos gestos importam — tento viver assim."
+  ],
+  "destaques": [
+    { "icon": "fa-solid fa-cake-candles", "label": "Pai desde", "value": "15/12/2017" },
+    { "icon": "fa-solid fa-star-of-david", "label": "Fé", "value": "Judaísmo" },
+    { "icon": "fa-solid fa-code", "label": "Atuação", "value": "Dev & Análise" },
+    { "icon": "fa-solid fa-dumbbell", "label": "Ativo", "value": "Corrida, bike, musculação" },
+    { "icon": "fa-solid fa-horse", "label": "Natureza", "value": "Cavalos & ar livre" },
+    { "icon": "fa-solid fa-futbol", "label": "Time", "value": "Fluminense FC" }
+  ],
+  "links": [
+    { "label": "Email",   "href": "mailto:contato@neshamatech.com.br", "icon": "fa-solid fa-envelope" },
+    { "label": "GitHub",  "href": "https://github.com/marcos-rabinowicz", "icon": "fab fa-github" },
+    { "label": "LinkedIn","href": "https://www.linkedin.com/in/marcos-rabinowicz/", "icon": "fab fa-linkedin" }
+  ]
+}
