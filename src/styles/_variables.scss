@@ -8,7 +8,9 @@ $font-size-base: 16px;
 
 $font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
-$font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+$font-mono:
+  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  monospace;
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 1rem;
@@ -57,16 +59,16 @@ $shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.18);
   --col-surface: #102c48;
   --col-border: #1e3a56;
 
-  --gold-1: #E3C789;
-  --gold-2: #F3E3B9;
-  --gold-3: #C9A55E;
+  --gold-1: #e3c789;
+  --gold-2: #f3e3b9;
+  --gold-3: #c9a55e;
   --gold-thread: linear-gradient(
     90deg,
-    rgba(227,199,137,0) 0%,
-    rgba(227,199,137,.85) 18%,
+    rgba(227, 199, 137, 0) 0%,
+    rgba(227, 199, 137, 0.85) 18%,
     var(--gold-2) 50%,
-    rgba(227,199,137,.85) 82%,
-    rgba(227,199,137,0) 100%
+    rgba(227, 199, 137, 0.85) 82%,
+    rgba(227, 199, 137, 0) 100%
   );
 
   --radius-md: #{$radius-md};

@@ -15,15 +15,17 @@ import { NAV_ITEMS_DEFAULT } from '../../constants/nav.constants';
 export class Header implements OnInit, OnDestroy {
   protected readonly nav: NavItem[] = [...NAV_ITEMS_DEFAULT];
   protected activeId: SectionId = 'home';
-  protected menuOpen  = false;
+  protected menuOpen = false;
   protected scrolled = false;
   private sub?: Subscription;
 
   constructor(private spy: ScrollSpyService) {}
 
   ngOnInit(): void {
-    setTimeout(() => this.spy.init(this.nav.map(n => n.id)));
-    this.sub = this.spy.active$.subscribe(id => (this.activeId = id as SectionId));
+    setTimeout(() => this.spy.init(this.nav.map((n) => n.id)));
+    this.sub = this.spy.active$.subscribe(
+      (id) => (this.activeId = id as SectionId),
+    );
   }
 
   ngOnDestroy(): void {
@@ -51,6 +53,7 @@ export class Header implements OnInit, OnDestroy {
   }
 
   @HostListener('document:keydown.escape')
-  onEsc() { this.closeMenu(); }
+  onEsc() {
+    this.closeMenu();
+  }
 }
-

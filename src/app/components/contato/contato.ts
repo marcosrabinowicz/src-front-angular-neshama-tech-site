@@ -25,14 +25,14 @@ export class Contato implements AfterViewInit {
 
   enviar(e: Event) {
     e.preventDefault();
-    
+
     const assunto = `[Site] Novo contato - ${this.nome || 'Interessado(a)'}`;
-    
+
     const corpo = [
       `Nome: ${this.nome}`,
       `Email: ${this.email}`,
       '',
-      this.mensagem
+      this.mensagem,
     ].join('%0D%0A');
 
     const href = `mailto:${this.destino}?subject=${encodeURIComponent(assunto)}&body=${corpo}`;

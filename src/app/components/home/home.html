@@ -13,19 +13,30 @@
       </p>
 
       <div class="hero__ctas" data-aos="fade-up" data-aos-delay="120">
-        <a href="#portfolio" class="btn btn--primary"
-           (click)="scrollTo($event, '#portfolio')"
-           [attr.aria-label]="'Ver portfólio'">
+        <a
+          href="#portfolio"
+          class="btn btn--primary"
+          (click)="scrollTo($event, '#portfolio')"
+          [attr.aria-label]="'Ver portfólio'"
+        >
           Ver portfólio
         </a>
-        <a href="#contato" class="btn btn--ghost"
-           (click)="scrollTo($event, '#contato')"
-           [attr.aria-label]="'Ir para contato'">
+        <a
+          href="#contato"
+          class="btn btn--ghost"
+          (click)="scrollTo($event, '#contato')"
+          [attr.aria-label]="'Ir para contato'"
+        >
           Falar com a Neshama Tech
         </a>
       </div>
 
-      <ul class="hero__bullets" role="list" data-aos="fade-up" data-aos-delay="200">
+      <ul
+        class="hero__bullets"
+        role="list"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <li>UX acessível (contraste, foco, aria-*).</li>
         <li>SEO básico pronto e deploy no GitHub Pages.</li>
         <li>Integração v2: página de projeto, demo e Swagger.</li>
@@ -34,9 +45,7 @@
 
     <figure class="hero__media" data-aos="fade-left" data-aos-delay="80">
       <div class="codecard" aria-hidden="true">
-        <div class="codecard__hdr">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="codecard__hdr"><span></span><span></span><span></span></div>
         <pre class="codecard__body"><code>
 $ npx create-neshama app
 ✔ Acessibilidade

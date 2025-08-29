@@ -9,8 +9,7 @@ import { AosService } from '../../shared/services/Aos/aos.services';
   templateUrl: './sobre.html',
   styleUrl: './sobre.scss',
 })
-export class Sobre  implements AfterViewInit {
-  
+export class Sobre implements AfterViewInit {
   constructor(private aos: AosService) {}
 
   ngAfterViewInit(): void {
@@ -23,7 +22,7 @@ export class Sobre  implements AfterViewInit {
     e.preventDefault();
 
     const el = document.querySelector(selector) as HTMLElement | null;
-    
+
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

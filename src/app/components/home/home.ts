@@ -10,12 +10,11 @@ import { AosService } from '../../shared/services/Aos/aos.services';
   styleUrl: './home.scss',
 })
 export class Home implements AfterViewInit {
-
   constructor(private aos: AosService) {}
 
   ngAfterViewInit(): void {
     this.aos.initOnce({ duration: 700 });
-    
+
     setTimeout(() => this.aos.refresh());
   }
 

@@ -1,68 +1,146 @@
 <!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Demo em breve — Neshama Tech</title>
-  <meta name="color-scheme" content="dark light">
-  <style>
-    :root{
-      --bg:#0B263F; --surface:#102C48; --border:#1E3A56; --text:#F7F3E5; --pri:#E3C789; --acc:#FDFEF6;
-      --radius:16px; --shadow:0 12px 28px rgba(0,0,0,.18);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color:var(--text); background:
-        radial-gradient(800px 400px at 10% 20%, color-mix(in srgb, var(--pri) 22%, transparent), transparent 70%),
-        radial-gradient(600px 300px at 90% 10%, color-mix(in srgb, var(--acc) 25%, transparent), transparent 70%),
-        linear-gradient(180deg, color-mix(in srgb, var(--bg) 90%, transparent), var(--bg));
-      display:grid; place-items:center; padding:2rem;
-    }
-    .card{
-      width:min(720px, 92vw); background:var(--surface); border:1px solid var(--border);
-      border-radius:var(--radius); box-shadow:var(--shadow); padding:1.25rem;
-    }
-    h1{margin:.25rem 0 .5rem; font-weight:800; letter-spacing:-.01em}
-    .lead{opacity:.92; margin:0 0 .75rem}
-    .pill{display:inline-block; margin:.25rem .35rem .25rem 0; padding:.2rem .6rem; border-radius:999px;
-      border:1px solid color-mix(in srgb, var(--pri) 40%, var(--border));
-      background: color-mix(in srgb, var(--pri) 24%, var(--surface)); font-size:.9rem;}
-    .actions{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.75rem}
-    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.6rem .9rem; border-radius:12px;
-      border:1px solid var(--border); color:var(--text); text-decoration:none; cursor:pointer}
-    .btn--pri{background: color-mix(in srgb, var(--pri) 45%, var(--surface));
-      border-color: color-mix(in srgb, var(--pri) 55%, var(--border));}
-    .btn--ghost{background:transparent}
-    .btn:hover{transform:translateY(-1px)}
-    .muted{opacity:.8; font-size:.95rem; margin-top:.5rem}
-  </style>
-</head>
-<body>
-  <main class="card" role="main" aria-labelledby="title">
-    <p class="pill">Neshama Tech</p>
-    <h1 id="title">Demo em breve</h1>
-    <p id="desc" class="lead">Estamos preparando a demonstração desta aplicação.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Demo em breve — Neshama Tech</title>
+    <meta name="color-scheme" content="dark light" />
+    <style>
+      :root {
+        --bg: #0b263f;
+        --surface: #102c48;
+        --border: #1e3a56;
+        --text: #f7f3e5;
+        --pri: #e3c789;
+        --acc: #fdfef6;
+        --radius: 16px;
+        --shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            800px 400px at 10% 20%,
+            color-mix(in srgb, var(--pri) 22%, transparent),
+            transparent 70%
+          ),
+          radial-gradient(
+            600px 300px at 90% 10%,
+            color-mix(in srgb, var(--acc) 25%, transparent),
+            transparent 70%
+          ),
+          linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--bg) 90%, transparent),
+            var(--bg)
+          );
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+      .card {
+        width: min(720px, 92vw);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 1.25rem;
+      }
+      h1 {
+        margin: 0.25rem 0 0.5rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .lead {
+        opacity: 0.92;
+        margin: 0 0 0.75rem;
+      }
+      .pill {
+        display: inline-block;
+        margin: 0.25rem 0.35rem 0.25rem 0;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid color-mix(in srgb, var(--pri) 40%, var(--border));
+        background: color-mix(in srgb, var(--pri) 24%, var(--surface));
+        font-size: 0.9rem;
+      }
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 0.9rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        color: var(--text);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn--pri {
+        background: color-mix(in srgb, var(--pri) 45%, var(--surface));
+        border-color: color-mix(in srgb, var(--pri) 55%, var(--border));
+      }
+      .btn--ghost {
+        background: transparent;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .muted {
+        opacity: 0.8;
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-labelledby="title">
+      <p class="pill">Neshama Tech</p>
+      <h1 id="title">Demo em breve</h1>
+      <p id="desc" class="lead">
+        Estamos preparando a demonstração desta aplicação.
+      </p>
 
-    <div class="actions">
-      <a class="btn btn--pri" href="./#portfolio" aria-label="Voltar para o portfólio">Voltar ao portfólio</a>
-      <a class="btn btn--ghost" href="./#contato" aria-label="Ir para contato">Falar com a Neshama Tech</a>
-    </div>
+      <div class="actions">
+        <a
+          class="btn btn--pri"
+          href="./#portfolio"
+          aria-label="Voltar para o portfólio"
+          >Voltar ao portfólio</a
+        >
+        <a class="btn btn--ghost" href="./#contato" aria-label="Ir para contato"
+          >Falar com a Neshama Tech</a
+        >
+      </div>
 
-    <p class="muted" id="hint"></p>
-  </main>
+      <p class="muted" id="hint"></p>
+    </main>
 
-  <script>
-    // Mostra o nome do projeto se vier ?projeto=...
-    const params = new URLSearchParams(location.search);
-    const nome = params.get('projeto');
-    if (nome) {
-      document.getElementById('desc').textContent =
-        `Estamos preparando a demonstração de “${decodeURIComponent(nome)}”.`;
-      document.getElementById('hint').textContent =
-        'Dica: se houver repositório público, ele está linkado no card do projeto.';
-    }
-  </script>
-</body>
+    <script>
+      // Mostra o nome do projeto se vier ?projeto=...
+      const params = new URLSearchParams(location.search);
+      const nome = params.get("projeto");
+      if (nome) {
+        document.getElementById("desc").textContent =
+          `Estamos preparando a demonstração de “${decodeURIComponent(nome)}”.`;
+        document.getElementById("hint").textContent =
+          "Dica: se houver repositório público, ele está linkado no card do projeto.";
+      }
+    </script>
+  </body>
 </html>

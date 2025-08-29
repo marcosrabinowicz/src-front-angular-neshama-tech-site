@@ -22,7 +22,6 @@ import { AosService } from './shared/services/Aos/aos.services';
     CommonModule,
     Header,
     Footer,
-
   ],
 })
 export class App {

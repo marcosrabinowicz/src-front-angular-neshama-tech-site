@@ -55,46 +55,86 @@
 }
 
 @mixin gold-thread($w: 420px, $h: 2px) {
-  width: $w; height: $h; background: var(--gold-thread);
+  width: $w;
+  height: $h;
+  background: var(--gold-thread);
   border-radius: 999px;
-  filter: saturate(1.2) drop-shadow(0 0 8px rgba(243,227,185,.18));
+  filter: saturate(1.2) drop-shadow(0 0 8px rgba(243, 227, 185, 0.18));
 }
 
 @mixin gold-underline {
   position: relative;
-  &::after{
-    content: ""; position: absolute; left: 0; bottom: -.35rem;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
     @include gold-thread(120px, 2px);
   }
 }
 
-@mixin gold-ring($size: 160px){
-  position: relative; isolation: isolate;
-  &::before{
-    content: ""; position: absolute; inset: 0; margin: auto;
-    width: $size; height: $size; border-radius: 50%;
+@mixin gold-ring($size: 160px) {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
     background:
-      radial-gradient(closest-side, rgba(243,227,185,.28), transparent 60%),
-      conic-gradient(from 180deg,
-        transparent 0 35%, rgba(227,199,137,.7) 36% 64%, transparent 65% 100%);
-    filter: blur(0.6px) drop-shadow(0 0 12px rgba(243,227,185,.22));
+      radial-gradient(closest-side, rgba(243, 227, 185, 0.28), transparent 60%),
+      conic-gradient(
+        from 180deg,
+        transparent 0 35%,
+        rgba(227, 199, 137, 0.7) 36% 64%,
+        transparent 65% 100%
+      );
+    filter: blur(0.6px) drop-shadow(0 0 12px rgba(243, 227, 185, 0.22));
     z-index: -1;
   }
 }
 
-@mixin up($min) { @media (min-width: #{$min}) { @content; } }
-@mixin down($max) { @media (max-width: calc(#{$max} - 0.02px)) { @content; } }
-@mixin between($min, $max) { @media (min-width:#{$min}) and (max-width:calc(#{$max} - 0.02px)) { @content; } }
+@mixin up($min) {
+  @media (min-width: #{$min}) {
+    @content;
+  }
+}
+@mixin down($max) {
+  @media (max-width: calc(#{$max} - 0.02px)) {
+    @content;
+  }
+}
+@mixin between($min, $max) {
+  @media (min-width:#{$min}) and (max-width:calc(#{$max} - 0.02px)) {
+    @content;
+  }
+}
 
 @keyframes gold-thread-shimmer {
-  0%   { background-position: 0% 0;   opacity:.78; filter: saturate(1.1) drop-shadow(0 0 6px rgba(243,227,185,.12)); }
-  12%  {                              opacity:1;   filter: saturate(1.15) drop-shadow(0 0 12px rgba(243,227,185,.22)); }
-  50%  { background-position: 100% 0; }
-  100% { background-position: 0% 0;   opacity:.78; filter: saturate(1.1) drop-shadow(0 0 6px rgba(243,227,185,.12)); }
+  0% {
+    background-position: 0% 0;
+    opacity: 0.78;
+    filter: saturate(1.1) drop-shadow(0 0 6px rgba(243, 227, 185, 0.12));
+  }
+  12% {
+    opacity: 1;
+    filter: saturate(1.15) drop-shadow(0 0 12px rgba(243, 227, 185, 0.22));
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+    opacity: 0.78;
+    filter: saturate(1.1) drop-shadow(0 0 6px rgba(243, 227, 185, 0.12));
+  }
 }
 
 @mixin gold-thread-anim($dur: 8s, $delay: 1.2s) {
   background-size: 300% 100%;
   animation: gold-thread-shimmer var(--gold-dur, #{$dur}) ease-in-out
-             var(--gold-delay, #{$delay}) infinite;
+    var(--gold-delay, #{$delay}) infinite;
 }

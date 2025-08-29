@@ -1,45 +1,84 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.contato-section { padding-block: $space-12; }
+.contato-section {
+  padding-block: $space-12;
+}
 
-.contato__grid{
-  display:grid;
+.contato__grid {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(1rem, 3vw, 2rem);
 
-  @include down($bp-tablet){ grid-template-columns: 1fr; }
-}
-
-.socials { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: $space-4; }
-
-.contato__form {
-  padding: 1rem;
-  display: grid; gap: .8rem;
-}
-
-.field {
-  display: grid; gap: .35rem;
-  label { font-weight: 600; }
-  input, textarea {
-    width: 100%; padding: .65rem .75rem; border-radius: var(--radius-md);
-    border: 1px solid var(--col-border);
-    background: color-mix(in srgb, var(--col-surface) 95%, var(--col-primary) 5%);
-    color: var(--col-text);
-    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
-    &:focus { @include focus-ring; }
+  @include down($bp-tablet) {
+    grid-template-columns: 1fr;
   }
 }
 
-.form__actions { display:flex; gap:.5rem; flex-wrap:wrap; margin-top: .25rem; }
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: $space-4;
+}
+
+.contato__form {
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  label {
+    font-weight: 600;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--col-border);
+    background: color-mix(
+      in srgb,
+      var(--col-surface) 95%,
+      var(--col-primary) 5%
+    );
+    color: var(--col-text);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      background 0.15s ease;
+    &:focus {
+      @include focus-ring;
+    }
+  }
+}
+
+.form__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
 .btn--primary {
   background: color-mix(in srgb, var(--col-primary) 45%, var(--col-surface));
   border-color: color-mix(in srgb, var(--col-primary) 55%, var(--col-border));
 }
 .btn--ghost {
-  background: transparent; border-color: var(--col-border);
-  &:hover { background: color-mix(in srgb, var(--col-primary) 18%, var(--col-surface)); }
+  background: transparent;
+  border-color: var(--col-border);
+  &:hover {
+    background: color-mix(in srgb, var(--col-primary) 18%, var(--col-surface));
+  }
 }
-.hint { opacity: .85; font-size: $font-size-90; margin: .25rem 0 0; }
+.hint {
+  opacity: 0.85;
+  font-size: $font-size-90;
+  margin: 0.25rem 0 0;
+}
 
-.contato-section :focus-visible { @include focus-ring; }
+.contato-section :focus-visible {
+  @include focus-ring;
+}
