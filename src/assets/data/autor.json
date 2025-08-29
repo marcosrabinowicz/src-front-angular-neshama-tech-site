@@ -24,8 +24,9 @@
     { "icon": "fa-solid fa-futbol", "label": "Time", "value": "Fluminense FC" }
   ],
   "links": [
-    { "label": "Email",   "href": "mailto:contato@neshamatech.com.br", "icon": "fa-solid fa-envelope" },
+    { "label": "Email",   "href": "mailto:marcosrabinowicz.works@gmail.com", "icon": "fa-solid fa-envelope" },
     { "label": "GitHub",  "href": "https://github.com/marcos-rabinowicz", "icon": "fab fa-github" },
     { "label": "LinkedIn","href": "https://www.linkedin.com/in/marcos-rabinowicz/", "icon": "fab fa-linkedin" }
-  ]
+  ],
+  "foto": "assets/img/autor-avatar.webp"
 }
