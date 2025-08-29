@@ -16,7 +16,15 @@
         aria-label="Foto do autor"
         role="img"
       >
-        <img *ngIf="a.foto" [src]="a.foto" alt="" />
+        <img
+          *ngIf="a.foto"
+          [src]="a.foto"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width="512"
+          height="512"
+        />
         <div *ngIf="!a.foto" class="autor__placeholder" aria-hidden="true">
           MR
         </div>

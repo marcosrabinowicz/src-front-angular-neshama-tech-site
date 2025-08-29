@@ -22,18 +22,11 @@
 }
 
 .autor__avatar {
+  width: clamp(160px, 30vw, 280px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  width: min(240px, 90%);
-  aspect-ratio: 1 / 1;
-  margin: 0;
-  border-radius: 50%;
-  background: color-mix(
-    in srgb,
-    var(--col-surface) 90%,
-    var(--col-primary) 10%
-  );
-  border: 1px solid var(--col-border);
   overflow: hidden;
   @include gold-ring(180px);
   @include gold-ring-anim(18s, 1.2s);
@@ -114,4 +107,10 @@
 
 .autor-section :focus-visible {
   @include focus-ring;
+}
+
+@include up($bp-desktop) {
+  .autor__avatar {
+    width: clamp(200px, 22vw, 320px);
+  }
 }
